@@ -67,9 +67,16 @@ The example below shows clicking a parcel in Mount Holly to see that there are m
 
 ## How do I measure distances/areas in the Viewer?
 The Viewer includes a measurement tool for both linear distance and area. Simply select the ruler icon in the upper left next to the Search bar and click on the map to specify a distance or polygon. Both options allow the user to select from various units.
+
 ## Can I zoom to my location?
-Yes. Use the ‘Find My Location’ icon in the lower right above the "+" button to quickly zoom to your location. Note: your browser must have permission to know your location for this function to work. 
+Yes. Use the ‘Find My Location’ icon in the lower right above the "+" button to quickly zoom to your location. Note: your browser / device must have permission to know your location for this function to work. 
+
 ## Can I zoom to a clicked feature on the map instead of using the Search bar?
 Yes. In the popup for a clicked town or parcel select the "Zoom to" option to maximize the full extent of the feature. 
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_ZoomtoClicked.gif)
+
+## How do I view unmatched parcels?
+There is a selectable layer titled "Parcels - Unmatched" in the layer list. Toggle it on and it will display those parcels without a SPAN match to the current Grand List, thus not enabling a join with its related grand list information. For example, on a mobile device:
+
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_mobile_unmatchedparcels.png)

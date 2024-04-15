@@ -262,6 +262,100 @@ It returns the following info in a pop-up, and in this case, showing ownership t
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_ownershipsinceGL.jpg)
 
+## Property Transfer Return Overview
+This script shows an overview of relevant property transfer information for a selected parcel for display as a text paragraph atop the popup window. It dynamically displays first and second buyers and sellers, where applicable, as well as handles Multi-SPAN parcels. It is ```{expression/expr7}```.
+
+```javascript
+var parcelFeature = $feature;
+
+//References PTTR point layer within the map
+var transferLayer = FeatureSetByName($map, "Vermont Property Transfers");
+
+var propSt = $feature.E911ADDR
+var propCity = $feature.TOWN
+var GLowner1 = $feature.OWNER1
+var GLowner2 = $feature.OWNER2
+var GLyear = $feature.GLYEAR
+var RealListVal = $feature.REAL_FLV
+var GISYear = $feature.YEAR
+
+//Annual Grand List date; ***update year with new GLs as available***
+var GLDate = Date(2022, 4, 1)
+
+if (parcelFeature.PROPTYPE == "PARCEL") {
+  //Look for any PTTR points that intersect (lie within) with the parcel
+  var transferFeatures = Intersects(transferLayer, parcelFeature);
+
+  //If more than 0 PTTR points are within the parcel
+  if (Count(transferFeatures) > 0) {
+    //Checks below for multi-SPAN parcels by looking for unique SPANs
+    var uniqueSpan = true;
+    var firstSpan = null;
+    var recordsAfterDate = "";
+    for (var transfer in transferFeatures) {
+      //If the closing date is after the current GL (i.e., has been transferred since annual GL was published)
+      if (transfer.closeDate > GLDate) {
+        if (firstSPAN == null) {
+          firstSpan = transfer.SPAN;
+        } else if (firstSpan != transfer.SPAN) {
+          //Flag to indicate there are multiple PTTR SPANs within a single parcel (indicates multi-SPAN)
+          uniqueSpan = false;
+        }
+        if (GLowner2 =='') {
+        recordsAfterDate = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+". A property transfer has occured for this parcel since the current statewide Grand List ("+GLYEAR+") and ownership may have changed. See property transfer details below. Parcel geometry was last updated in "+GISYear+"."
+        } else {
+        recordsAfterDate = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+" and "+GLowner2+". A property transfer has occured for this parcel since the current statewide Grand List ("+GLYEAR+") and ownership may have changed. See property transfer details below. Parcel geometry was last updated in "+GISYear+"."
+        }
+      }
+    }
+
+    //If there are multiple PTTR SPANs within a single parcel (i.e., it is multi-SPAN)
+    if (!uniqueSPAN) {
+      if (GLowner2 =='') {
+      var result = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+". This is a multi-SPAN parcel. Multiple properties, owners, and transfers may exist within this parcel. Parcel geometry was last updated in "+GISYear+"."
+      } else {
+      var result = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+" and "+GLowner2+". This is a multi-SPAN parcel. Multiple properties, owners, and transfers may exist within this parcel. Parcel geometry was last updated in "+GISYear+"."
+      }  
+    
+      //var result = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+". This is a multi-SPAN parcel. Multiple properties, owners, and transfers may exist within this parcel. Parcel geometry was last updated in "+GISYear+".";
+      //If there is only one SPAN for the parcel, find all those between the current Grand List and present
+    } else if (recordsAfterDate != "") {
+      var result = recordsAfterDate;
+      //No transfers between current GL and present
+    } else {
+      //UPDATE YEAR following annual GL join
+      if (GLowner2 =='') {
+      var result = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+". There is no record of a property transfer for this parcel since the current statewide Grand List ("+GLYEAR+"). Parcel geometry was last updated in "+GISYear+"."
+      } else {
+      var result = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+" and "+GLowner2+". There is no record of a property transfer for this parcel since the current statewide Grand List ("+GLYEAR+"). Parcel geometry was last updated in "+GISYear+"."
+      }  
+    }
+
+  } else {
+    //No transfer of this parcel at all (since 2019)
+          if (GLowner2 =='') {
+      var result = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+". There is no record of a property transfer for this parcel since the current statewide Grand List ("+GLYEAR+"). Parcel geometry was last updated in "+GISYear+"."
+      } else {
+      var result = "The property at "+propSt+" in "+propCity+" is owned by "+GLowner1+" and "+GLowner2+". There is no record of a property transfer for this parcel since the current statewide Grand List ("+GLYEAR+"). Parcel geometry was last updated in "+GISYear+"."
+      }
+  }
+} else {
+  //Parcel is not a PROPTYPE = PARCEL feature
+  var result = "This feature is categorized as "+parcelFeature.PROPTYPE+". Feature geometry was last updated in "+GISYear+".";
+}
+
+return result
+
+```
+
+It returns the following in a text block in a popup:
+
+The property at 60 OLD BROOK ROAD Middlesex was transferred by KIMBERLY CROWELL to KATHLEEN CLEMENTS and LAWRENCE M CLEMENTS on January 24, 2024. The property is 1 acres and transferred for $900000. The value of the property in the 2023 town Grand List was $445800. The SPAN is 39012110847 and the parcel ID is 00045-003.000. The seller use of the property was Secondary Residence; the buyer use is Domicile/Primary Residence. 
+
+MULTI-SPANS: Note the number of stacked polygons associated with this SPAN in the top right, and the multi-SPAN flag included in the popup:
+
+![Popup showing a multi-SPAN parcel and list of all transfers since 2019](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_popup_featureset_multipart_01.JPG)
+
 ## Survey Information (if Available)
 This script shows **whether or not there is a submittal to the [Vermont Land Survey Library](https://landsurvey.vermont.gov/) for the selected parcel**, pulling from the Land Survey Library view layer referenced in the same map. It is ```{expression/expr4}```
 

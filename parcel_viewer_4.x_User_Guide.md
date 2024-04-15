@@ -2,7 +2,7 @@
 ## How do I use the Vermont Parcel Viewer?
 The Parcel Viewer includes a variety of tools to query, format, and explore Vermont parcel data. See each section below to learn about specific features and widgets. Each widget can be displayed or hidden by clicking the respective green button in the tray along the bottom of the page.
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_overview.jpg)
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_overview_v2.jpg)
 
 ## Search
 Use the search bar in the upper left to find a parcel using the address, SPAN, or parcel ID. **The search tool will automatically query multiple layers; use the dropdown to select only certain layers/geocoders if desired.** The map will zoom to the parcel once a search result is selected. Users can also search by municipality to retrieve information about the respective parcel maintenance practices, including mapping vendor, date of last update, and associated regional planning commission. NOTE: a bug exists  when searching by SPAN. Entering a valid SPAN in the format ###-###-##### may not produce any results in the dropdown, but hitting Enter should still return the correct parcel and zoom to the location on the map.

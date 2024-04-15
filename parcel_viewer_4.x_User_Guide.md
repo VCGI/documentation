@@ -1,34 +1,38 @@
 # Vermont Parcel Viewer 4.x User Guide
 ## How do I use the Vermont Parcel Viewer?
-The Parcel Viewer includes a variety of tools to query, format, and explore Vermont parcel data. See each section below to learn about specific features and widgets. Each widget can be displayed or hidden by clicking the respective green button along the bottom of the page.
+The Parcel Viewer includes a variety of tools to query, format, and explore Vermont parcel data. See each section below to learn about specific features and widgets. Each widget can be displayed or hidden by clicking the respective green button in the tray along the bottom of the page.
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_overview.jpg)
 
 ## Search
-Use the search bar in the upper right to find a parcel using the address, SPAN, or parcel ID. **The search tool will automatically query multiple layers; use the dropdown to select only certain layers/geocoders if desired.** The map will zoom to the parcel once a search result is selected. Users can also search by municipality to retrieve information about the respective parcel maintenance practices (mapping vendor, date of last update, associated regional planning commission, etc.). NOTE: a bug exists  when searching by SPAN. Entering a valid SPAN in the format ###-###-##### may not produce any results in the dropdown, but hitting Enter should still return the correct parcel and zoom to the location on the map.
+Use the search bar in the upper left to find a parcel using the address, SPAN, or parcel ID. **The search tool will automatically query multiple layers; use the dropdown to select only certain layers/geocoders if desired.** The map will zoom to the parcel once a search result is selected. Users can also search by municipality to retrieve information about the respective parcel maintenance practices, including mapping vendor, date of last update, and associated regional planning commission. NOTE: a bug exists  when searching by SPAN. Entering a valid SPAN in the format ###-###-##### may not produce any results in the dropdown, but hitting Enter should still return the correct parcel and zoom to the location on the map.
 
 ## Legend
 The legend widget is displayed automatically upon opening the Viewer in the lower left sidebar. **It includes any layers that are toggled on (see below) and visible at the current zoom scale.** When the Viewer is first opened, the legend shows how recently the GIS data have been updated for each municipality. As one zooms in to the map, this layer turns off and the parcel polygons are displayed. As other layers turn on they will also appear in the legend.
 
 ## Layers
-Several layers in the Viewer are formatted to automatically become hidden or visible depending on the map scale, but users can also control layer visibility as desired at any scale through the Layers widget. Expand a layer by clicking […] to control layer transparency and access a link to the layer source/metadata. Some layers (Property Transfers, E911 Address Points, Inactive Parcels and labels, Surveys) will remain hidden at all scales unless specifically toggled on by the user.
+The Layers widget is the left-most button in the bottom widget tray. Several layers in the Viewer are formatted to automatically become hidden or visible depending on the map scale. Users can control the visibility of most layers as desired through the Layers widget, though some layers may be unavailable at certain scales. Some layers (Property Transfers, E911 Address Points, Inactive Parcels and labels, Surveys) will remain hidden at all scales unless specifically toggled on by the user. Expand a layer by clicking […] to control layer transparency and access a link to the layer source/metadata.
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_layers.jpg)
 
 ## Grand List Table
-Use the Grand List Table widget to query, filter, zoom to, and/or export Grand List records. The table includes all fields from the annual Grand List joined to the parcel data, as well as fields related to parcel geometry. Select records by clicking parcels in the map, or use the ‘Set Filter’ button under ‘More Actions’ to write a query and select multiple records. For example, to filter the table to show only records in the town of Barnet:
+Use the Grand List Table widget to query, filter, zoom to, and/or export Grand List records. The table includes all fields from the annual Grand List joined to the parcel data, as well as fields related to parcel geometry. Select records by clicking parcels in the map, or use the ‘Set Filter’ button under ‘More Actions’ to write a query and select multiple records. For example, one could set a filter to show only parcels in the town of Athens in the table and on the map, and then export only that subset of records to a .csv file for use outside of the Parcel Viewer:
 
-(Image forthcoming)
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_GrandListFilterExport.gif)
 
-Records can be exported to another format for use outside of the Viewer. Under ‘More Actions’ select Export and the format desired for all, selected, or filtered records. The ‘More Actions’ menu also includes a Statistics function, which can be applied to the entire dataset or filtered records for numeric fields (e.g., calculating statistics for the Listed Real Value for all parcels in Barnet will return the record count, minimum, maximum, sum, average, and standard deviation).
+The ‘More Actions’ menu also includes a Statistics function, which can be applied to the entire dataset or filtered records for numeric fields. For example, calculating statistics for the Listed Real Value for all parcels in Athens will return the record count, minimum, maximum, sum, average, and standard deviation.
+
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_GrandListFilterStatistics.gif)
 
 ## Convert Coordinates
 Use this widget to click a location on the map and obtain the coordinates in a variety of formats. Users can also enter the coordinates in the ‘Input’ bar to zoom to the location. The default Input units are decimal degrees, but this can be adjusted through the settings in the upper right.
 
-(Image forthcoming)
-
 ## Filter Records
-The Filter Records widget offers an alternative to filtering and exporting records similar to the Grand List table. Choose to filter based on Town, SPAN, and/or E911 address. Results can be viewed on the map, in a table, and/or exported to another format for use outside of the Viewer. Statistics can also be calculated on the filtered dataset. 
+The Filter Records widget offers an alternative to filtering and exporting records, similar to the Grand List table, for both the Active Parcels layer and the Property Transfers layer. For Active Parcels, choose to filter based on Town, Property Type, and/or MATCHSTAT ('Unmatched' parcels are those without a corresponding SPAN in the Grand List; 'Exempt' features include roads, railroads, and water bodies). For Property Transfers, choose to filter by town and/or a closing date range. Results can be viewed on the map, in a table, and/or exported to another format for use outside of the Viewer. Statistics can also be calculated on the filtered dataset. 
+
+The example below shows filtering the Property Transfer layer to isolate transfers that took place in Bakersfield between January 1, 2024 and March 31, 2024, as well as calculating statistics on the value paid/transferred and exporting the filtered records to a .csv:
+
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_FilterRecordsPTTs.gif)
 
 ## Select
 The Select widget allows users to select one or more parcels using various extents (rectangle, circle, lasso), lines, or point locations. Results can be refined to specific layers and selected records can be viewed in a table, viewed on the map, exported to another format, or used to calculate statistics.
@@ -49,13 +53,18 @@ The Basemap Gallery widget allows a user to select ESRI basemaps for different m
 ## What information is in the popup when I click on a parcel?
 * The popup contains several fields of interest from the Grand List, including the SPAN, parcel ID, property description, property type, listed real value, and ownership. 
 * 'GIS Year’ indicates the year of the most recent parcel geometry update for the town. ‘Grand List Year’ is the annual Grand List the parcel data are currently joined to and is consistent for all parcels statewide.
-* The ‘Total Acreage’ field shows the acreage of the parcel as listed in the Grand List (i.e., deeded acreage as listed in the town records), the acreage of the parcel as calculated with GIS based on the drawn extent, and the percent difference between the two values. It is common for discrepancies to exist between the Grand List and GIS acreage, however, substantial differences may warrant further review or revision of the deed description and/or the parcel geometry. In the Lister and Assessor Handbook (2021), the Vermont Department of Taxes specifies that “a survey done by a Vermont registered land surveyor is entitled to the greatest evidentiary weight, followed by a tax map, and, finally, by a recorded deed” (see page 33). When evaluating parcel data it is important to remember that parcel extents shown in the Viewer are representative, generalized, and not reflective of official survey boundaries. See more details here.
-* All property (parcels) transferred by deed since January 2019 will include the closing date, seller, and buyer information in the popup. Transfers occurring since the annual Grand List currently joined to the parcel geometry, if any, are also specified. This information indicates changes in ownership that are not yet included in the annual Grand List. 
+* The ‘Total Acreage’ field shows the acreage of the parcel as listed in the Grand List (i.e., deeded acreage as listed in the town records), the acreage of the parcel as calculated with GIS based on the drawn extent, and the percent difference between the two values. It is common for discrepancies to exist between the Grand List and GIS acreage, however, substantial differences may warrant further review or revision of the deed description and/or the parcel geometry. In the [Lister and Assessor Handbook (2021)](https://tax.vermont.gov/sites/tax/files/documents/GB-1143.pdf), the Vermont Department of Taxes specifies that “a survey done by a Vermont registered land surveyor is entitled to the greatest evidentiary weight, followed by a tax map, and, finally, by a recorded deed” (see page 33). When evaluating parcel data it is important to remember that parcel extents shown in the Viewer are representative, generalized, and not reflective of official survey boundaries. See more details [here](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs#9).
+* All property (parcels) transferred by deed since January 2019 will include the closing date, seller, and buyer information in the popup. Transfers occurring since the annual Grand List currently joined to the parcel geometry, if any, are also specified. This information indicates changes in ownership that are not yet reflected in the annual Grand List. 
 * Any surveys from the Vermont Land Survey Library associated with the parcel will be included with the survey type, date, and surveyor. A link to a pdf of the survey will also be provided. Occasionally, particularly in the case of subdivisions, a related survey will not be listed in the popup. To verify whether one or more surveys exist for a parcel, toggle on the ‘Surveys – Vermont Land Survey Library’ layer to see approximate survey footprints. When this layer is toggled on, the popup will include additional pages linking directly to any available pdfs.
+The example below shows clicking a parcel in Mount Holly to see that there are multiple related surveys. The survey layer is toggled on, and the link provided in the popup is used to access a pdf of one of the surveys. To see pdfs for the other surveys, flip through the popup pages using the arrows at the top of the popup; each page will list an individual survey with related information and a link to the pdf.
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_surveys.png)
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_ViewSurveys.gif)
 
 ## How do I measure distances/areas in the Viewer?
-The Viewer includes a measurement tool for both linear distance and area. Simply select the ruler icon in the upper left and click on the map to specify a distance or polygon. Both options allow the user to select from various units.
+The Viewer includes a measurement tool for both linear distance and area. Simply select the ruler icon in the upper left next to the Search bar and click on the map to specify a distance or polygon. Both options allow the user to select from various units.
 ## Can I zoom to my location?
-Yes. Use the ‘Find My Location’ icon in the lower right to quickly zoom to your location. Note: your browser must have permission to know your location for this function to work. 
+Yes. Use the ‘Find My Location’ icon in the lower right above the "+" button to quickly zoom to your location. Note: your browser must have permission to know your location for this function to work. 
+## Can I zoom to a clicked feature on the map instead of using the Search bar?
+Yes. In the popup for a clicked town or parcel select the "Zoom to" option to maximize the full extent of the feature. 
+
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_ZoomtoClicked.gif)

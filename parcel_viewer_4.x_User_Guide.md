@@ -10,6 +10,11 @@ Use the search bar in the upper left to find a parcel using the address, SPAN, o
 ## Legend
 The legend widget is displayed automatically upon opening the Viewer in the lower left sidebar. **It includes any layers that are toggled on (see below) and visible at the current zoom scale.** When the Viewer is first opened, the legend shows how recently the GIS data have been updated for each municipality. As one zooms in to the map, this layer turns off and the parcel polygons are displayed. As other layers turn on they will also appear in the legend.
 
+## Pop Up Window
+Click on a feature in the map window to see a pop up with associated information. One can move the location of the pop up window by either clicking in a different location, or by docking the pop up window to the right of the screen with the dock button.
+
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_movepopupv2.jpg)
+
 ## Layers
 The Layers widget is the left-most button in the bottom widget tray. Several layers in the Viewer are formatted to automatically become hidden or visible depending on the map scale. Users can control the visibility of most layers as desired through the Layers widget, though some layers may be unavailable at certain scales. Some layers (Property Transfers, E911 Address Points, Inactive Parcels and labels, Surveys) will remain hidden at all scales unless specifically toggled on by the user. Expand a layer by clicking […] to control layer transparency and access a link to the layer source/metadata.
 

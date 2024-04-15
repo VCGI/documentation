@@ -32,7 +32,7 @@ The Filter Records widget offers an alternative to filtering and exporting recor
 
 The example below shows filtering the Property Transfer layer to isolate transfers that took place in Bakersfield between January 1, 2024 and March 31, 2024, as well as calculating statistics on the value paid/transferred and exporting the filtered records to a .csv:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_FilterRecordsPTTs.gif)
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_FilterRecordsPTTs_1144px.gif)
 
 ## Select
 The Select widget allows users to select one or more parcels using various extents (rectangle, circle, lasso), lines, or point locations. Results can be refined to specific layers and selected records can be viewed in a table, viewed on the map, exported to another format, or used to calculate statistics.
@@ -58,7 +58,7 @@ The Basemap Gallery widget allows a user to select ESRI basemaps for different m
 * Any surveys from the Vermont Land Survey Library associated with the parcel will be included with the survey type, date, and surveyor. A link to a pdf of the survey will also be provided. Occasionally, particularly in the case of subdivisions, a related survey will not be listed in the popup. To verify whether one or more surveys exist for a parcel, toggle on the ‘Surveys – Vermont Land Survey Library’ layer to see approximate survey footprints. When this layer is toggled on, the popup will include additional pages linking directly to any available pdfs.
 The example below shows clicking a parcel in Mount Holly to see that there are multiple related surveys. The survey layer is toggled on, and the link provided in the popup is used to access a pdf of one of the surveys. To see pdfs for the other surveys, flip through the popup pages using the arrows at the top of the popup; each page will list an individual survey with related information and a link to the pdf.
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_ViewSurveys.gif)
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_ViewSurveys_1144px.gif)
 
 ## How do I measure distances/areas in the Viewer?
 The Viewer includes a measurement tool for both linear distance and area. Simply select the ruler icon in the upper left next to the Search bar and click on the map to specify a distance or polygon. Both options allow the user to select from various units.

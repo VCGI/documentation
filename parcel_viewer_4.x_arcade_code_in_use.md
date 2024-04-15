@@ -350,7 +350,7 @@ return result
 
 It returns the following in a text block in a popup:
 
-```The property at 60 OLD BROOK ROAD Middlesex was transferred by KIMBERLY CROWELL to KATHLEEN CLEMENTS and LAWRENCE M CLEMENTS on January 24, 2024. The property is 1 acres and transferred for $900000. The value of the property in the 2023 town Grand List was $445800. The SPAN is 39012110847 and the parcel ID is 00045-003.000. The seller use of the property was Secondary Residence; the buyer use is Domicile/Primary Residence.```
+>The property at 60 OLD BROOK ROAD Middlesex was transferred by KIMBERLY CROWELL to KATHLEEN CLEMENTS and LAWRENCE M CLEMENTS on January 24, 2024. The property is 1 acres and transferred for $900000. The value of the property in the 2023 town Grand List was $445800. The SPAN is 39012110847 and the parcel ID is 00045-003.000. The seller use of the property was Secondary Residence; the buyer use is Domicile/Primary Residence.
 
 MULTI-SPANS: Note the number of stacked polygons associated with this SPAN in the top right, and the multi-SPAN flag included in the popup:
 

@@ -356,6 +356,59 @@ MULTI-SPANS: Note the number of stacked polygons associated with this SPAN in th
 
 ![Popup showing a multi-SPAN parcel and list of all transfers since 2019](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_popup_featureset_multipart_01.JPG)
 
+## Property Transfer Summary - PTTR Layer
+This script shows the first and second buyers and sellers and closing date for a selected property where applicable in a text box atop the popup window. It is ```{expression/exp8}```.
+
+```javascript
+var propSt = $feature.propLocStr
+var propCity =$feature.propLocCty
+var sellEnt = $feature.sellEntNam
+var sellFir = $feature.sellFstNam
+var sellLast = $feature.sellLstNam
+var buyEnt = $feature.buyEntNam
+var buyFir = $feature.buyFstNam
+var buyLast = $feature.buyLstNam
+var closing = Text($feature.closeDate, 'MMMM D, Y')
+var span = $feature.span
+var parcID = $feature.TownParcID
+var value = $feature.ValPdOrTrn
+var acres = Round($feature.landSize,2)
+var glValue = $feature.TownGlValu
+var glYear = $feature.TownGlYear
+var sellUse = $feature.sUsePrDesc
+var buyUse = $feature.bUsePrDesc
+
+var buyOthArr = Split($feature.addBuyrNam, ",")
+var lenBuyOth = Count(buyOthArr)
+    if ($feature.ttlBuyers >1) {
+      var buy2 = buyEnt+" "+buyFir+" "+buyLast+" and "+buyOthArr[1] + ' ' + buyOthArr[0]
+  }
+    else {
+      var buy2 = buyEnt+" "+buyFir+" "+buyLast
+  }
+
+
+var sellOthArr = Split($feature.addSellNam, ",")
+var lenSellOth = Count(sellOthArr)
+  if ($feature.ttlSellers >1) {
+      var sell2 = sellEnt+" "+sellFir+" "+sellLast+" and "+sellOthArr[1] + ' ' + sellOthArr[0]
+  }
+    else {
+      var sell2 = sellEnt+" "+sellFir+" "+sellLast
+  }
+
+var summary = "The property at "+propSt+" "+propCity+" was transferred by "+sell2+" to "+buy2+" on "
++closing+". The property is "+acres+" acres and transferred for $"+value+
+". The value of the property in the "+glYear+" town Grand List was $"+glValue+". The SPAN is "+span+" and the parcel ID is "+parcID+
+". The seller use of the property was "+sellUse+"; the buyer use is "
++buyUse+"."
+
+return summary
+```
+
+It returns text that looks like this:
+> The property at 240 FARMSTEAD DRIVE Shelburne was transferred by ALAIN BOISJOLI and LORI A BOISJOLI to ALAIN AND LORI BOISJOLI FAMILY REVOCABLE TRUST on December 6, 2019. The property is 0.76 acres and transferred for $0. The value of the property in the 2019 town Grand List was $486100. The SPAN is 58218311150 and the parcel ID is 089-0240. The seller use of the property was Domicile/Primary Residence; the buyer use is Domicile/Primary Residence.
+
 ## Survey Information (if Available)
 This script shows **whether or not there is a submittal to the [Vermont Land Survey Library](https://landsurvey.vermont.gov/) for the selected parcel**, pulling from the Land Survey Library view layer referenced in the same map. It is ```{expression/expr4}```
 

@@ -1,0 +1,1 @@
+This directory contains documentation related to the Vermont Parcel Viewer 4.x application first released in 2024 and maintained by the Vermont Center for Geographic Information (VCGI).

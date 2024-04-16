@@ -80,3 +80,7 @@ Yes. In the popup for a clicked town or parcel select the "Zoom to" option to ma
 There is a selectable layer titled "Parcels - Unmatched" in the layer list. Toggle it on and it will display those parcels without a SPAN match to the current Grand List, thus not enabling a join with its related grand list information. For example, on a mobile device:
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_mobile_unmatchedparcels.png)
+
+Users may also use the Filter Records tool to select the VT Active Parcels layer, filter a town by its unmatched records, and then zoom to / highlight them on the map for review:
+
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_filterunmatched.gif)

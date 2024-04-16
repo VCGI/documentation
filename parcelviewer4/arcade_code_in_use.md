@@ -398,16 +398,17 @@ var lenSellOth = Count(sellOthArr)
   }
 
 var summary = "The property at "+propSt+" "+propCity+" was transferred by "+sell2+" to "+buy2+" on "
-+closing+". The property is "+acres+" acres and transferred for $"+value+
-". The value of the property in the "+glYear+" town Grand List was $"+glValue+". The SPAN is "+span+" and the parcel ID is "+parcID+
-". The seller use of the property was "+sellUse+"; the buyer use is "
-+buyUse+"."
++closing+". 
+//The property is "+acres+" acres and transferred for $"+value+
+// ". The value of the property in the "+glYear+" town Grand List was $"+glValue+". The SPAN is "+span+" and the parcel ID is "+parcID+
+// ". The seller use of the property was "+sellUse+"; the buyer use is "
+// +buyUse+"."
 
 return summary
 ```
 
 It returns text that looks like this:
-> The property at 240 FARMSTEAD DRIVE Shelburne was transferred by ALAIN BOISJOLI and LORI A BOISJOLI to ALAIN AND LORI BOISJOLI FAMILY REVOCABLE TRUST on December 6, 2019. The property is 0.76 acres and transferred for $0. The value of the property in the 2019 town Grand List was $486100. The SPAN is 58218311150 and the parcel ID is 089-0240. The seller use of the property was Domicile/Primary Residence; the buyer use is Domicile/Primary Residence.
+> The property at 240 FARMSTEAD DRIVE Shelburne was transferred by ALAIN BOISJOLI and LORI A BOISJOLI to ALAIN AND LORI BOISJOLI FAMILY REVOCABLE TRUST on December 6, 2019.
 
 ## Survey Information (if Available)
 This script shows **whether or not there is a submittal to the [Vermont Land Survey Library](https://landsurvey.vermont.gov/) for the selected parcel**, pulling from the Land Survey Library view layer referenced in the same map. It is ```{expression/expr4}```

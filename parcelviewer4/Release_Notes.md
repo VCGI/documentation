@@ -11,8 +11,8 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4.0. Sin
 * **New feature:** inclusion of [Vermont Property Transfers](https://geodata.vermont.gov/datasets/VCGI::vt-property-transfers/explore) spatial layer. Reflects transfers between January 2019-present with fields including closing date, new ownership, transfer value, buyer/seller use of property, etc. Some fields are integrated into parcel popups; users can also view the layer independently to see all fields.
 * **New feature:** inclusion of [Town Parcel Data Status](https://experience.arcgis.com/experience/d88b19e908a1460da8bcb7326f7c2ec6) layer. Reflects town’s update method, recency, RPC, download link in popup; labels towns with date of last geometry update when at relevant zoom level.
 * **New feature:** inclusion of Surveys from [Vermont Land Survey Library](https://maps.vcgi.vermont.gov/landsurveylibrary/). Shows approximate extent of surveys uploaded to Land Survey Library. Some fields and a link to pdf survey are integrated into parcel popups; users can also view the layer independently to see all fields and links to pdfs. 
-* **New feature:** application is responsively designed for desktop and mobile applications, automatically detecting native screen resolution and serving layout accordingly.
-* **New feature:** popup window can be relocated to side of screen, enhancing visibility of selected or filtered parcel(s).
+* **New functionality:** application is responsively designed for desktop and mobile applications, automatically detecting native screen resolution and serving layout accordingly.
+* **New functionality:** popup window can be relocated to side of screen, enhancing visibility of selected or filtered parcel(s).
 * **New functionality:** dynamic labels that display Grand List match status, SPAN, and acreage for each parcel. Labels can be toggled on or off. 
 * **New functionality:** Grand List table has additional functionality that allows the calculation of statistics (sum, min, max, average, etc.) for numerical fields. Can apply to all, selected, or filtered records. 
 * **New functionality:** FAQ widget added with more details on functionality and the Parcel Program, including links to additional resources.
@@ -33,7 +33,7 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4.0. Sin
 * Select one or more features by point, rectangle, circle, lasso, or line; control over layer(s) to select from. Calculate statistics, export, zoom to, or view results in table.
 * When searching by address, the result will zoom to the location but will not select the corresponding parcel or display the popup. This is because the address search uses a geolocator to find the location. When searching by town, SPAN, or Parcel ID the result will zoom to, select, and display the popup for the parcel since it is searching on the parcel layer itself. This is consistent with the existing Parcel Viewer.
 
-## Known Issues - Beta Release
+## Known Issues - v.4.0 Release
 * [A](https://community.esri.com/t5/arcgis-experience-builder-questions/exb-search-widget-not-behaving/td-p/1370067) [bug](https://community.esri.com/t5/arcgis-experience-builder-questions/full-text-search-index-on-hosted-feature-layer/m-p/1346085/highlight/true#M9200) [exists](https://community.esri.com/t5/arcgis-experience-builder-questions/multiple-things-stopped-working-in-the-search/m-p/1349288#M9354) when searching by SPAN. Entering a valid SPAN in the format ###-###-##### may not produce any results in the dropdown, but hitting Enter should still return the correct parcel and zoom to the location on the map.
 * Searches by address do not select the queried parcel - only zoom to and recenter to them. This is related to how layers are queried; see last bullet of section above.
 

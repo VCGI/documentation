@@ -84,3 +84,6 @@ There is a selectable layer titled "Parcels - Unmatched" in the layer list. Togg
 Users may also use the Filter Records tool to select the VT Active Parcels layer, filter a town by its unmatched records, and then zoom to / highlight them on the map for review:
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer4x_filterunmatched.gif)
+
+# Other Questions
+Have a question about underlying municipal parcel data? Please see the [parcel program FAQ's](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs). In many cases, any errors or changes in the parcel viewer reflect the way the source data are handled by the town(s) in question, and may need to be resolved there.

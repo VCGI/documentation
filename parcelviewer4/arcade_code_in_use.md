@@ -1,6 +1,6 @@
 # Vermont Parcel Viewer 4.x Arcade Code Documentation
 
-This page documents [arcade code](https://developers.arcgis.com/arcade/) in use and related aspects as built in the Vermont Parcel Viewer v.4.x maintained by the [Vermont Center for Geographic Information (VCGI)](https://vcgi.vermont.gov). Certain app functionality depends on this code, and is only found in the application and/or its referenced map products (not in the data sources themselves).
+This page documents [arcade code](https://developers.arcgis.com/arcade/) in use and related aspects as built in the Vermont Parcel Viewer v.4.x maintained by the [Vermont Center for Geographic Information (VCGI)](https://vcgi.vermont.gov). **Certain app functionality depends on this code, and is only found in the application and/or its referenced map products (not in the data sources themselves).** Advanced users looking to recreate this functionality may refer to this documentation.
 
 # Labels
 ## Active Parcels Contingent Label

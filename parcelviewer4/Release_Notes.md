@@ -19,6 +19,7 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4.0. Sin
 * **New functionality:** URL parameterization: when using the Search function, the resulting map extent (map center, scale, and layer state visibility) is dynamically incorporated into the URL. Sharing the updated URL allows others to quickly access and see the same specific map view.
 * **New functionality:** Filter records for Active Parcels by Town, Property Type, and/or MATCHSTAT without opening the Grand List table. Filter Property Transfers by Town and/or a closing date range. Filter results can be viewed on the map, used to calculate statistics, and exported to other formats.
 * **Changed functionality:** Convert coordinates from one system to another based on a clicked point on the map or an address input. Decimal degree (DD) input can be converted to DDM, DMS, Long-Lat, MGRS, USNG, and UTM.
+* **Changed functionality:** Most draw capabilities maintained (points, lines areas, with measurements in varying units.) Some functionality no longer available (specifically: snap to vertex, text annotation) due to no longer being available upon [move from from Web AppBuilder to Experience Builder](https://doc.arcgis.com/en/web-appbuilder/latest/create-apps/wab-exb-widget-functionality-matrix.htm).
 * **New field:** GIS/calculated acreage, Grand List acreage, and percent difference between the two (absolute) is now dynamically calculated in parcel popups.
 * **Updated field:** Town resident code is defined within popup.
 
@@ -27,7 +28,6 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4.0. Sin
 * Toggle layers on/off, adjust transparency, link to source layer/metadata
 * Toggle widgets on/off, move and/or resize widget popup
 * Print capabilities
-* Draw capabilities
 * Basemap selection
 * Measure distances and areas in unit of choice
 * Select one or more features by point, rectangle, circle, lasso, or line; control over layer(s) to select from. Calculate statistics, export, zoom to, or view results in table.

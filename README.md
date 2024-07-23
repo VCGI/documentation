@@ -1,5 +1,2 @@
 # Documentation
-This is a repository for VCGI's documentation. It serves to offer modern, accessible, versioned documents in a web-first format.
-
-# Content Naming Convention
-Forthcoming May 2024.
+This is a repository for VCGI's public documentation. It serves to offer modern, accessible, versioned documents in a web-first format.

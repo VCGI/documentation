@@ -30,7 +30,18 @@ The ‘More Actions’ menu also includes a Statistics function, which can be ap
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_GrandListFilterStatistics.gif)
 
 ## Convert Coordinates
-Use this widget to click a location on the map and obtain the coordinates in a variety of formats. Users can also enter the coordinates in the ‘Input’ bar to zoom to the location. The default Input units are decimal degrees, but this can be adjusted through the settings in the upper right.
+Use this widget to click a location on the map and obtain the coordinates for that point in a variety of formats. Users can also enter the coordinates in the ‘Input’ bar to zoom to the location. The default Input units are decimal degrees, but this can be adjusted through the settings in the upper right.
+
+Available conversions include:
+* DD - Decimal Degrees
+* DDM - Degrees Decimal Minutes
+* DMS - Degrees Minutes and Seconds
+* MGRS - Military Grid Reference System
+* USNG - United States National Grid
+* UTM - Universal Transverse Mercator
+* Lat/Lon - Latitude Longitude (available for all conversions)
+
+![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_convertcoordinates_latlon.jpg)
 
 ## Filter Records
 The Filter Records widget offers an alternative to filtering and exporting records, similar to the Grand List table, for both the Active Parcels layer and the Property Transfers layer. For Active Parcels, choose to filter based on Town, Property Type, and/or MATCHSTAT ('Unmatched' parcels are those without a corresponding SPAN in the Grand List; 'Exempt' features include roads, railroads, and water bodies). For Property Transfers, choose to filter by town and/or a closing date range. Results can be viewed on the map, in a table, and/or exported to another format for use outside of the Viewer. Statistics can also be calculated on the filtered dataset. 

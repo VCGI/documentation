@@ -505,7 +505,7 @@ Round(AC_Diff_PCT,2)
 
 return ('Annual Grand List Acres: '+GLACRESdec+TextFormatting.NewLine+'GIS Acres: '+Round(GISACRES,2)+TextFormatting.NewLine+Round(AC_Diff_PCT,1)+'% Difference');
 ```
-It returns the following info in a pop-up, and in this case, shows one survey for the selected parcel within the Land Survey Library:
+It returns the following info in a pop-up:
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_percentdifference.jpg)
 

@@ -7,7 +7,7 @@ April 24, 2024
 VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4.0. Since 2019, and reflecting the work of the [parcel program](https://vcgi.vermont.gov/data-and-programs/parcel-program), the Parcel Viewer has been one of the State's most-used map applications, enabling easy access to one of its most-used spatial datasets. This update offers enhanced capabilities with quick access to information found in the previous parcel viewer, the [Town Mapping Status application](https://maps.vcgi.vermont.gov/parcelstatus/), the [Vermont Land Survey Library](https://landsurvey.vermont.gov/), and the [Vermont Property Transfer spatial dataset](https://geodata.vermont.gov/datasets/VCGI::vt-property-transfers/about). The Viewer displays the best available statewide parcel data as provided by municipalities and mapping vendors. For a full description of the uses, applications, and sources of parcel data please visit the [Parcel Program webpage](https://vcgi.vermont.gov/data-and-programs/parcel-program) and [FAQs](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs), including specifics about [what parcel data are](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs#1) and [are not](https://vcgi.vermont.gov/data-and-programs/parcel-program#parceldataarenot).
 
 ## Changelog
-*Version 4.0.2 | November 19,2024*
+*Version 4.0.2 | November 19, 2024*
 * **New functionality:** Simple text annotation added to the draw widget.
 
 *Version 4.0.1 | April 24, 2024*

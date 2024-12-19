@@ -62,6 +62,9 @@ Use the Print widget to create simple .png or .pdf maps using layers in the Parc
 ## Draw
 The Draw widget allows users to add shapes and markers to the Viewer. Items drawn in the Viewer cannot be saved and will disappear once the application is refreshed, but can be preserved for reference by printing the map to a .png file (see Print widget above). Simple text annotation re-added to the draw widget as of version 4.0.2.
 
+## Measure
+The Measure widget allows one to draw and measure either lines or areas in different units. This tool is useful for *estimating* the area within a drawn polygon, for example. Once drawn on screen, a measurement can also be exported as a file via the [print function](#print).
+
 ## Basemap Gallery
 The Basemap Gallery widget allows a user to select ESRI basemaps for different mapping needs. Be sure to check different basemaps with different levels of transparency on select layers, such as the Imagery - VCGI Color layer.
 

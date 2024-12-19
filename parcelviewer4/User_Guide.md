@@ -65,6 +65,8 @@ The Draw widget allows users to add shapes and markers to the Viewer. Items draw
 ## Measure
 The Measure widget allows one to draw and measure either lines or areas in different units. This tool is useful for *estimating* the area within a drawn polygon, for example. Once drawn on screen, a measurement can also be exported as a file via the [print function](#print).
 
+![Parcel_Viewer_Measure_and_Print_v2](https://github.com/user-attachments/assets/b8bfba75-b394-4eff-9208-c79fdcef10b5)
+
 ## Basemap Gallery
 The Basemap Gallery widget allows a user to select ESRI basemaps for different mapping needs. Be sure to check different basemaps with different levels of transparency on select layers, such as the Imagery - VCGI Color layer.
 

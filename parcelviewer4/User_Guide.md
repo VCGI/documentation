@@ -59,6 +59,8 @@ For quick reference to some commonly asked questions, refer to the FAQ widget. M
 ## Print
 Use the Print widget to create simple .png or .pdf maps using layers in the Parcel Viewer. Toggle layers on/off as desired, specify the paper size, and select the current extent, current scale, or a customized scale for the map. Enter additional details as needed and select Print. Under the ‘Results’ tab a link will appear for your customized .png or .pdf output, which can be saved for use outside the Viewer. Note: The Parcel Viewer is not intended to fulfill large-format printing needs.
 
+![Parcel_Viewer_4x_Print](https://github.com/user-attachments/assets/0529571b-608f-4ec9-8c59-8e4906a2defd)
+
 ## Draw
 The Draw widget allows users to add shapes and markers to the Viewer. Items drawn in the Viewer cannot be saved and will disappear once the application is refreshed, but can be preserved for reference by printing the map to a .png file (see Print widget above). Simple text annotation re-added to the draw widget as of version 4.0.2.
 

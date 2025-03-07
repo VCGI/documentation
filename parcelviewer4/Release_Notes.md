@@ -36,6 +36,11 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4.0. Sin
 * Select one or more features by point, rectangle, circle, lasso, or line; control over layer(s) to select from. Calculate statistics, export, zoom to, or view results in table.
 * When searching by address, the result will zoom to the location but will not select the corresponding parcel or display the popup. This is because the address search uses a geolocator to find the location. When searching by town, SPAN, or Parcel ID the result will zoom to, select, and display the popup for the parcel since it is searching on the parcel layer itself. This is consistent with the existing Parcel Viewer.
 
+## Minimum Requirements
+The Vermont Parcel Viewer 4.x is built using the ArcGIS Online and ArcGIS Experience Builder platforms. [Click here](https://doc.arcgis.com/en/arcgis-online/reference/browsers.htm) for a list of supported web browsers. VCGI does not control these underlying requirements.
+
+For best performance and full functionality, use the latest version of a browser linked above.
+
 ## Known Issues - v.4.0 Release
 * [A](https://community.esri.com/t5/arcgis-experience-builder-questions/exb-search-widget-not-behaving/td-p/1370067) [bug](https://community.esri.com/t5/arcgis-experience-builder-questions/full-text-search-index-on-hosted-feature-layer/m-p/1346085/highlight/true#M9200) [exists](https://community.esri.com/t5/arcgis-experience-builder-questions/multiple-things-stopped-working-in-the-search/m-p/1349288#M9354) when searching by SPAN. Entering a valid SPAN in the format ###-###-##### may not produce any results in the dropdown, but hitting Enter should still return the correct parcel and zoom to the location on the map.
 * Searches by address do not select the queried parcel - only zoom to and recenter to them. This is related to how layers are queried; see last bullet of section above.

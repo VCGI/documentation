@@ -14,7 +14,9 @@ Support hours are from 7:45 a.m. to 4:30 p.m. Monday through Friday.  No weekend
 ### Service Ability
 VCGI strives to meet the following service availability standards.
 
-Table
+| Availability   | % Downtime per year  | Downtime per month  | Downtime per week  |
+|----------------|----------------------|---------------------|--------------------|
+| 98%            | 7.30 days            | 14.4 hours          | 3.36 hours         |
 
 ### Routine Maintenance Notification
 VCGI will avoid conducting routine maintenance during core hours and days (7:45 a.m. to 4:30 p.m. Monday through Friday).  Notice will only be given for planned disruptions greater than 1 hour. Notices will be sent out on the VGIS-L listserv. Sign up/login to VGIS-L is [here.](https://list.uvm.edu/cgi-bin/wa?SUBED1=vgis-l&A=1)

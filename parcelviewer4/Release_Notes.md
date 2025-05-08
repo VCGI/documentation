@@ -8,6 +8,9 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4. Since
 
 ## Changelog
 *Version 4.0.2 | November 19, 2024*
+* **New functionality:** Added ACCD GIS-maintained TIF District Boundary layer ([Service](https://anrmaps.vermont.gov/arcgis/rest/services/map_services/ACCD_OpenData/MapServer/7) | [Item](https://geodata.vermont.gov/datasets/accd::vt-tax-increment-financing-tif-districts/about)), per request from Tax Department. No change to version number.
+
+*Version 4.0.2 | November 19, 2024*
 * **New functionality:** Simple text annotation added to the draw widget.
 
 *Version 4.0.1 | April 24, 2024*

@@ -1,5 +1,4 @@
-# VSDI Web Services
-## Life Cycle Support Policy
+# VSDI Web Services Life Cycle Support Policy
 
 ## Purpose
 This Life Cycle Support Policy is designed to help communicate how VCGI manages web services over their life span.

@@ -32,3 +32,6 @@ Removal of objects (feature classes, tables, rasters, relationships) and/or fiel
 
 ## Services Registry
 All web services where Host Organization = VCGI in this VSDI Web Services Matrix are supported under this Life Cycle Policy.  All other web services in the Matrix not hosted by VCGI or those discovered by users on VCGI’s ArcGIS Online or ArcGIS Server instance are NOT supported by this policy and therefore can be removed without warning.
+
+<iframe title="Vermont Spatial Data Infrastructure (VSDI)" aria-label="Table" id="datawrapper-chart-MuX5X" src="https://datawrapper.dwcdn.net/MuX5X/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="746" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
+</script>

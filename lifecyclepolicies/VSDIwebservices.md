@@ -30,4 +30,4 @@ VCGI assigns version numbers to its services (except those “grand-parented” 
 Removal of objects (feature classes, tables, rasters, relationships) and/or fields associated with these objects from an AGS/AGO Service (including geocoding services). Adding fields to an object DOES NOT constitute a substantive change. Data edits to features or attributes DO NOT constitute a substantive change.
 
 ## Services Registry
-All web services where Host Organization = VCGI in this VSDI Web Services Matrix are supported under this Life Cycle Policy.  All other web services in the Matrix not hosted by VCGI or those discovered by users on VCGI’s ArcGIS Online or ArcGIS Server instance are NOT supported by this policy and therefore can be removed without warning.
+All web services where Host Organization = VCGI in this VSDI Web Services Matrix are supported under this Life Cycle Policy.  All other web services in the table not hosted by VCGI or those discovered by users on VCGI’s ArcGIS Online or ArcGIS Server instance are NOT supported by this policy and therefore can be removed without warning.

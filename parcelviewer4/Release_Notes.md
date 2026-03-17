@@ -2,11 +2,14 @@
 
 **Vermont Parcel Viewer | v. 4.x** | [Application Link](https://experience.arcgis.com/experience/b5a5cc7663c84761a305f70b913e1a60/) | [Application Permalink](https://maps.vcgi.vermont.gov/parcelviewer/)  
 [Vermont Center for Geographic Information](https://vcgi.vermont.gov/data-and-programs/parcel-program)  
-April 24, 2024 
+March 17, 2026 
 
 VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4. Since 2019, and reflecting the work of the [parcel program](https://vcgi.vermont.gov/data-and-programs/parcel-program), the Parcel Viewer has been one of the State's most-used map applications, enabling easy access to one of its most-used spatial datasets. This update offers enhanced capabilities with quick access to information found in the previous parcel viewer, the [Town Mapping Status application](https://maps.vcgi.vermont.gov/parcelstatus/), the [Vermont Land Survey Library](https://landsurvey.vermont.gov/), and the [Vermont Property Transfer spatial dataset](https://geodata.vermont.gov/datasets/VCGI::vt-property-transfers/about). The Viewer displays the best available statewide parcel data as provided by municipalities and mapping vendors. For a full description of the uses, applications, and sources of parcel data please visit the [Parcel Program webpage](https://vcgi.vermont.gov/data-and-programs/parcel-program) and [FAQs](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs), including specifics about [what parcel data are](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs#1) and [are not](https://vcgi.vermont.gov/data-and-programs/parcel-program#parceldataarenot).
 
 ## Changelog
+*Version 4.0.3 | March 17, 2026*
+* **New functionality:** Added Current Use data, which is referenced dynamically in the Active Parcel pop-up. If a parcel is enrolled in Current Use, basic information is displayed based on a match between the SPAN (Current Use) and Grand List SPAN (parcels) fields. The Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) contains all fields as provided by the Tax Department.
+
 *Version 4.0.2 | May 8, 2025*
 * **New functionality:** Added ACCD GIS-maintained TIF District Boundary layer ([Service](https://anrmaps.vermont.gov/arcgis/rest/services/map_services/ACCD_OpenData/MapServer/7) | [Item](https://geodata.vermont.gov/datasets/accd::vt-tax-increment-financing-tif-districts/about)) to underlying web map, per request from Tax Department. No change to version number.
 

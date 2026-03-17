@@ -83,6 +83,8 @@ The example below shows clicking a parcel in Mount Holly to see that there are m
 
 ![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/userguide_parcelviewer_ViewSurveys_1144px.gif)
 
+* Parcels enrolled in the Current Use program are noted, per the Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) provided by the Tax Department. If the Grand List SPAN of the selected parcel is found in the Current Use dataset, summary information is displayed including the land type (agriculture, forest, or both), the year enrolled, and how much of the parcel is enrolled (as both raw acreage and percent of total). A link to the full Current Use dataset is also provided.
+
 ## How do I measure distances/areas in the Viewer?
 The Viewer includes a measurement tool for both linear distance and area. Simply select the ruler icon in the upper left next to the Search bar and click on the map to specify a distance or polygon. Both options allow the user to select from various units.
 

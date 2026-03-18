@@ -19,7 +19,7 @@ return 'GIS SPAN: '+$feature.SPAN+TextFormatting.NewLine+
 ```
 It returns a label that appears like this:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_active_labels2.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_active_labels2.jpg)
 
 ## Inactive Parcels Contingent Label
 This script is entered in the "Labels Features" function of the Labels - Inactive Parcels layer.
@@ -36,7 +36,7 @@ return 'INACTIVE'+TextFormatting.NewLine+'PARENT SPAN: '+$feature.PARENTSPAN
 ```
 It returns a label that appears like this:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_inactivelabels.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_inactivelabels.jpg)
 
 ## Town Parcel Data Status Labels - GIS Date
 This script is entered in the "Labels Features" function of the Town Parcel Data Status layer.
@@ -45,7 +45,8 @@ $feature.Town+ " GIS Date: " +TextFormatting.NewLine+ $feature["GISDate"]
 ```
 It returns a label that appears like this:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_townstatuslabel.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_townstatuslabel.jpg)
+
 
 ## Address Points - E911 Labels - Primary Address + Town Name
 This script is entered in the "Labels Features" function of the Address Points - E911 layer.
@@ -55,7 +56,8 @@ $feature["PRIMARYADDRESS"]+TextFormatting.NewLine+$feature["TOWNNAME"]
 ```
 It returns a label that appears like this:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_e911labels.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_e911labels.jpg)
+
 
 # Symbology
 ## Town Data Status Layer - GIS Recency by Town
@@ -86,7 +88,8 @@ else {
 
 It returns symbology that can be styled to appear like this:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_townparcelstatus_symbology.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_townparcelstatus_symbology.jpg)
+
 
 Hex values for the Town Data Status symbology are as follows:
 
@@ -252,7 +255,8 @@ Concatenate([$feature.OWNER1,$feature.OWNER2], ', ') +TextFormatting.NewLine
 
 It returns the following info in a pop-up:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_ownership_annualGL.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_ownership_annualGL.jpg)
+
 
 ## Resident Ownership Code (Keyed)
 This script spells out what the Resident Ownership Code (RESCODE) field value means.
@@ -275,7 +279,8 @@ else if($feature.RESCODE == 'C') {
 
 It returns the following info in a pop-up:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_rescode.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_rescode.jpg)
+
 
 ## Property Transfers Since 2019
 This script shows **whether or not there is a property transfer occuring since 2019 on record for the selected parcel**, pulled on demand from the property transfers layer in the same map.
@@ -333,7 +338,8 @@ return "This feature is categorized as "+parcelFeature.PROPTYPE+". Transfer data
 
 It returns the following info in a pop-up:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_proptransferpopupup.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_proptransferpopupup.jpg)
+
 
 ## Property Transfers Since Annual Grand List
 This script shows **whether or not there is a property transfer occuring since the most recently joined annual grand list for the selected parcel**, pulled on demand from the property transfers layer in the same map.
@@ -399,7 +405,7 @@ if (parcelFeature.PROPTYPE == "PARCEL") {
 
 It returns the following info in a pop-up, and in this case, showing ownership that isn't yet reflected in the current joined annual grand list:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_ownershipsinceGL.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_ownershipsinceGL.jpg)
 
 
 ## Survey Information (if Available)
@@ -451,7 +457,7 @@ if (Count(surveysIntersect) > 0) {
 
 It returns the following info in a pop-up, and in this case, shows one survey for the selected parcel within the Land Survey Library:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_surveyavailability.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_surveyavailability.jpg)
 
 
 ## Link to Survey (if Available)
@@ -499,7 +505,7 @@ return ('Annual Grand List Acres: '+GLACRESdec+TextFormatting.NewLine+'GIS Acres
 ```
 It returns the following info in a pop-up with the on-the-fly calculated percent difference between listed (GL) and drawn (GIS) acres for the selected parcel:
 
-![](https://vcgi.nyc3.cdn.digitaloceanspaces.com/documentation-assets/images/arcade_parcelviewer_percentdifference.jpg)
+![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/arcade_parcelviewer_percentdifference.jpg)
 
 
 ## Current Use Enrollment

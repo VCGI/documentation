@@ -5,7 +5,7 @@ The Parcel Viewer includes a variety of tools to query, format, and explore Verm
 ![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/userguide_parcelviewer4x_overview_v2.jpg)
 
 ## Search
-Use the search bar in the upper left to find a parcel using the address, SPAN, or parcel ID. **The search tool will automatically query multiple layers; use the dropdown to select only certain layers/geocoders if desired.** The map will zoom to the parcel once a search result is selected. Users can also search by municipality to retrieve information about the respective parcel maintenance practices, including mapping vendor, date of last update, and associated regional planning commission. NOTE: a bug exists  when searching by SPAN. Entering a valid SPAN in the format ###-###-##### may not produce any results in the dropdown, but hitting Enter should still return the correct parcel and zoom to the location on the map.
+Use the search bar in the upper left to find a parcel using the address, SPAN, or parcel ID. **The search tool will automatically query multiple layers; use the dropdown to select only certain layers/geocoders if desired.** The map will zoom to the parcel once a search result is selected. Users can also search by municipality to retrieve information about the respective parcel maintenance practices, including mapping vendor, date of last update, and associated regional planning commission. 
 
 ## Legend
 The legend widget is displayed automatically upon opening the Viewer in the lower left sidebar. **It includes any layers that are toggled on (see below) and visible at the current zoom scale.** When the Viewer is first opened, the legend shows how recently the GIS data have been updated for each municipality. As one zooms in to the map, this layer turns off and the parcel polygons are displayed. As other layers turn on they will also appear in the legend.
@@ -62,7 +62,7 @@ Use the Print widget to create simple .png or .pdf maps using layers in the Parc
 ![Parcel_Viewer_4x_Print](https://github.com/user-attachments/assets/0529571b-608f-4ec9-8c59-8e4906a2defd)
 
 ## Draw
-The Draw widget allows users to add shapes and markers to the Viewer. Items drawn in the Viewer cannot be saved and will disappear once the application is refreshed, but can be preserved for reference by printing the map to a .png file (see Print widget above). Simple text annotation re-added to the draw widget as of version 4.0.2.
+The Draw widget allows users to add shapes and markers to the Viewer. Items drawn in the Viewer cannot be saved and will disappear once the application is refreshed, but can be preserved for reference by printing the map to a .png file (see Print widget above). Simple text annotation has been re-added to the draw widget as of version 4.0.2.
 
 ## Measure
 The Measure widget allows one to draw and measure either lines or areas in different units. This tool is useful for *estimating* the area within a drawn polygon, for example. Once drawn on screen, a measurement can also be exported as a file via the [print function](#print).
@@ -83,7 +83,7 @@ The example below shows clicking a parcel in Mount Holly to see that there are m
 
 ![](https://files.vcgi.vermont.gov/logo/documentation-public/parcelviewer4/userguide_parcelviewer_ViewSurveys_1144px.gif)
 
-* Parcels enrolled in the Current Use program are noted, per the Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) provided by the Tax Department. If the Grand List SPAN of the selected parcel is found in the Current Use dataset, summary information is displayed including the land type (agriculture, forest, or both), the year enrolled, and how much of the parcel is enrolled (as both raw acreage and percent of total). A link to the full Current Use dataset is also provided.
+* Parcels enrolled in the Current Use program are noted for the year specified, per the Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) provided by the Tax Department. If the Grand List SPAN of the selected parcel is found in the Current Use dataset, summary information is displayed including the land type (agriculture, forest, or both), the year enrolled, and how much of the parcel is enrolled (as both raw acreage and percent of total). A link to the full Current Use dataset is also provided.
 
 ## How do I measure distances/areas in the Viewer?
 The Viewer includes a measurement tool for both linear distance and area. Simply select the ruler icon in the upper left next to the Search bar and click on the map to specify a distance or polygon. Both options allow the user to select from various units.

@@ -10,13 +10,13 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4. Since
 
 *Version 4.1 | March 31, 2026*
 
-* **New functionality:** Added Current Use Program data, which is referenced dynamically in the Active Parcel pop-up. If a parcel is enrolled in Current Use, basic information is displayed based on a match between the SPAN (Current Use) and Grand List SPAN (parcels) fields. The Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) contains all fields as provided by the Tax Department. A once-per-year static join of the annual current use enrolled parcels table with the associated parcel geometry by matching SPAN is also available in the layer list. **Please review these records carefully as an entire parcel's area may not be enrolled in current use.**
+* **New feature:** Added Current Use Program data, which is referenced dynamically in the Active Parcel pop-up. If a parcel is enrolled in Current Use, basic information is displayed based on a match between the SPAN (Current Use) and Grand List SPAN (parcels) fields. The Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) contains all fields as provided by the Tax Department. A once-per-year static join of the annual current use enrolled parcels table with the associated parcel geometry by matching SPAN is also available in the layer list. **Please review these records carefully as an entire parcel's area may not be enrolled in current use.**
 
-* **New functionality:** Re-styled pop-up windows throughout the application to enable easier access to information
+* **New feature:** Re-styled pop-up windows throughout the application to enable easier access to information
 
 *Version 4.0.2 | May 8, 2025*
 
-* **New functionality:** Added ACCD GIS-maintained TIF District Boundary layer ([Service](https://anrmaps.vermont.gov/arcgis/rest/services/map_services/ACCD_OpenData/MapServer/7) | [Item](https://geodata.vermont.gov/datasets/accd::vt-tax-increment-financing-tif-districts/about)) to underlying web map, per request from Tax Department. No change to version number.
+* **New feature:** Added ACCD GIS-maintained TIF District Boundary layer ([Service](https://anrmaps.vermont.gov/arcgis/rest/services/map_services/ACCD_OpenData/MapServer/7) | [Item](https://geodata.vermont.gov/datasets/accd::vt-tax-increment-financing-tif-districts/about)) to underlying web map, per request from Tax Department. No change to version number.
 
 *Version 4.0.2 | November 19, 2024*
 

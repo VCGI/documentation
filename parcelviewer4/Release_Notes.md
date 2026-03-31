@@ -2,21 +2,28 @@
 
 **Vermont Parcel Viewer | v. 4.x** | [Application Link](https://experience.arcgis.com/experience/b5a5cc7663c84761a305f70b913e1a60/) | [Application Permalink](https://maps.vcgi.vermont.gov/parcelviewer/)  
 [Vermont Center for Geographic Information](https://vcgi.vermont.gov/data-and-programs/parcel-program)  
-March 17, 2026 
+March 17, 2026
 
 VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4. Since 2019, and reflecting the work of the [parcel program](https://vcgi.vermont.gov/data-and-programs/parcel-program), the Parcel Viewer has been one of the State's most-used map applications, enabling easy access to one of its most-used spatial datasets. This update offers enhanced capabilities with quick access to information found in the previous parcel viewer, the [Town Mapping Status application](https://maps.vcgi.vermont.gov/parcelstatus/), the [Vermont Land Survey Library](https://landsurvey.vermont.gov/), the [Vermont Property Transfer spatial dataset](https://geodata.vermont.gov/datasets/VCGI::vt-property-transfers/about), and the [Vermont Current Use Program dataset](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about). The Viewer displays the best available statewide parcel data as provided by municipalities and mapping vendors. For a full description of the uses, applications, and sources of parcel data please visit the [Parcel Program webpage](https://vcgi.vermont.gov/data-and-programs/parcel-program) and [FAQs](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs), including specifics about [what parcel data are](https://vcgi.vermont.gov/resources/frequently-asked-questions/parcel-program-faqs#1) and [are not](https://vcgi.vermont.gov/data-and-programs/parcel-program#parceldataarenot).
 
 ## Changelog
-*Version 4.0.3 | March 17, 2026*
-* **New functionality:** Added Current Use Program data, which is referenced dynamically in the Active Parcel pop-up. If a parcel is enrolled in Current Use, basic information is displayed based on a match between the SPAN (Current Use) and Grand List SPAN (parcels) fields. The Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) contains all fields as provided by the Tax Department.
+
+*Version 4.1 | March 31, 2026*
+
+* **New functionality:** Added Current Use Program data, which is referenced dynamically in the Active Parcel pop-up. If a parcel is enrolled in Current Use, basic information is displayed based on a match between the SPAN (Current Use) and Grand List SPAN (parcels) fields. The Current Use table ([Service](https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_TABLE_Cadastral_Current_Use_v1/FeatureServer/0) | [Item](https://geodata.vermont.gov/datasets/VCGI::vt-data-current-use-program-properties/about)) contains all fields as provided by the Tax Department. A once-per-year static join of the annual current use enrolled parcels table with the associated parcel geometry by matching SPAN is also available in the layer list. **Please review these records carefully as an entire parcel's area may not be enrolled in current use.**
+
+* **New functionality:** Re-styled pop-up windows throughout the application to enable easier access to information
 
 *Version 4.0.2 | May 8, 2025*
+
 * **New functionality:** Added ACCD GIS-maintained TIF District Boundary layer ([Service](https://anrmaps.vermont.gov/arcgis/rest/services/map_services/ACCD_OpenData/MapServer/7) | [Item](https://geodata.vermont.gov/datasets/accd::vt-tax-increment-financing-tif-districts/about)) to underlying web map, per request from Tax Department. No change to version number.
 
 *Version 4.0.2 | November 19, 2024*
+
 * **New functionality:** Simple text annotation added to the draw widget.
 
 *Version 4.0.1 | April 24, 2024*
+
 * **New feature:** inclusion of [Vermont Property Transfers](https://geodata.vermont.gov/datasets/VCGI::vt-property-transfers/explore) spatial layer. Reflects transfers between January 2019-present with fields including closing date, new ownership, transfer value, buyer/seller use of property, etc. Some fields are integrated into parcel popups; users can also view the layer independently to see all fields.
 * **New feature:** inclusion of [Town Parcel Data Status](https://experience.arcgis.com/experience/d88b19e908a1460da8bcb7326f7c2ec6) layer. Reflects town’s update method, recency, RPC, download link in popup; labels towns with date of last geometry update when at relevant zoom level.
 * **New feature:** inclusion of Surveys from [Vermont Land Survey Library](https://maps.vcgi.vermont.gov/landsurveylibrary/). Shows approximate extent of surveys uploaded to Land Survey Library. Some fields and a link to pdf survey are integrated into parcel popups; users can also view the layer independently to see all fields and links to pdfs. 
@@ -43,15 +50,18 @@ VCGI is pleased to announce the release of the Vermont Parcel Viewer v. 4. Since
 * When searching by address, the result will zoom to the location but will not select the corresponding parcel or display the popup. This is because the address search uses a geolocator to find the location. When searching by town, SPAN, or Parcel ID the result will zoom to, select, and display the popup for the parcel since it is searching on the parcel layer itself. This is consistent with the existing Parcel Viewer.
 
 ## Minimum Requirements
+
 The Vermont Parcel Viewer 4.x is built using the ArcGIS Online and ArcGIS Experience Builder platforms. [Click here](https://doc.arcgis.com/en/arcgis-online/reference/browsers.htm) for a list of supported web browsers. VCGI does not control these underlying requirements.
 
 For best performance and full functionality, use the latest version of a browser linked above. Not all functionality is available for mobile devices.
 
 ## Known Issues - v.4.0 Release
+
 * [A](https://community.esri.com/t5/arcgis-experience-builder-questions/exb-search-widget-not-behaving/td-p/1370067) [bug](https://community.esri.com/t5/arcgis-experience-builder-questions/full-text-search-index-on-hosted-feature-layer/m-p/1346085/highlight/true#M9200) [exists](https://community.esri.com/t5/arcgis-experience-builder-questions/multiple-things-stopped-working-in-the-search/m-p/1349288#M9354) when searching by SPAN. Entering a valid SPAN in the format ###-###-##### may not produce any results in the dropdown, but hitting Enter should still return the correct parcel and zoom to the location on the map.
 * Searches by address do not select the queried parcel - only zoom to and recenter to them. This is related to how layers are queried; see last bullet of section above.
 
 ## Data Sources and Dependencies
+
 | Layer                            | Dependency  | Item Name                                                                  | Spatial Ref  | Publisher       | URL                                                                                                                                            | Hosting  | Standalone Open Data  | Life Cycle Supported |   |
 |----------------------------------|-------------|----------------------------------------------------------------------------|--------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------|-----------------------|----------------------|---|
 | Town Parcel Data Status          | Indirect    | FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_DataStatus_SP_v1                 | SP           | Services_VCGI   | https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_DataStatus_SP_v1/FeatureServer/0  | AGO      | Yes                   | No                   |   |

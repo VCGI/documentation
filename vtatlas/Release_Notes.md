@@ -1,4 +1,4 @@
-# Vermont Parcel Viewer 4.x Release Notes
+# Vermont Atlas 1.x Release Notes
 
 **Vermont Atlas | v. 1.3** | [Application Permalink](https://anrmaps.vermont.gov/websites/VTATLASv1.2/)  
 [Vermont Center for Geographic Information](https://vcgi.vermont.gov)  

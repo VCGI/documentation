@@ -53,7 +53,7 @@ The next part of the script creates an intermediate table called **D_GL2INT** wh
 
 Each time the stored procedure is run, the intermediate table is truncated and then re-populated. A **LEFT OUTER JOIN** is used to merge the Intersection Table and the Grand List. This type of join merges two tables while maintaining every record in the table mentioned first (the Left table). In this case, every record in the Intersection Table is maintained. If there is a matching SPAN between the Intersection Table (GLIST_SPAN field) and the Grand List (SPAN field), the Grand List attribution is added to D_GL2INT.
 
-[IMAGE 1]
+![IMAGE 1](https://github.com/VCGI/documentation/blob/main/parceldata/IMAGE1_StackedPolygons.png?raw=true)
 
 ```sql
 -- Remove pre-existing data from D_GL2INT table which contains derived data and is not resgistered with the EGDB.

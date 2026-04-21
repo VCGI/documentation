@@ -1,4 +1,4 @@
-# Parcel Geometry With Multiple Records Handling
+# Handling Parcel Geometry With Many Associated Tabular Records
 ## Stacked Polygons
 
 The statewide parcel dataset is comprised of **parcel geometry**, the approximate parcel boundary lines drawn as closed multi-sided shapes (polygons), and **parcel attribution** from the annual Grand List. These two components are joined together by a matching School Property Account Number (SPAN) in the attribute table of the parcel polygons layer and in the Grand List. 

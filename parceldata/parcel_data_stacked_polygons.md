@@ -51,7 +51,7 @@ CREATE PROCEDURE JoinGL2Parcels As
 
 The next part of the script creates an intermediate table called **D_GL2INT** which joins **PARCEL_Admin.GRANDLIST** (the Grand List) and **PARCEL_Admin.TABLE_VTPARCELS_intersection_evw** (the Intersection Table). An versioned view (denoted by the _evw suffix) of the Intersection Table is used as mutiple users can make changes to the Intersection Table at the same time and versioning reconciles those differences. A versioned view of **PARCEL_Admin.Cadastral_VTPARCELS_poly_standardized_parcels_evw** (the parcel polygons) is also used for the same reason.
 
-Each time the stored procedure is run, the intermediate table is truncated and then re-populated. A **LEFT OUTER JOIN** is used to merge the Intersection Table and the Grand List. This type of join merges two tables while maintaining every record in the table mentioned first (the Left table). In this case, every record in the Intersection Table is maintained. If there is a matching SPAN between the Intersection Table (GLIST_SPAN field) and the Grand List (SPAN field), the Grand List attribution is added to D_GL2INT.
+After truncating the intermediate table, a **LEFT OUTER JOIN** is used to merge the Intersection Table and the Grand List. This type of join merges two tables while maintaining every record in the table mentioned first (the Left table). In this case, every record in the Intersection Table is maintained. If there is a matching SPAN between the Intersection Table (GLIST_SPAN field) and the Grand List (SPAN field), the Grand List attribution is added to D_GL2INT.
 
 ![IMAGE 1](https://github.com/VCGI/documentation/blob/main/parceldata/IMAGE1_StackedPolygons.png?raw=true)
 
@@ -75,7 +75,7 @@ ON (REPLACE(i.GLIST_SPAN,'-','') = REPLACE(g.span,'-','')) WHERE i.GIS_SPAN IS N
 
 ### Step 3: Define Final Production Table
 
-The last part of this script creates the final production table **D_GL2PARCELS** using two joins. After truncating, a **RIGHT OUTER JOIN** merges D_GL2INT to the parcel polygons with a SPAN match. All the records of the table listed second (the Right table) are maintainted. In this case, the records for D_GL2INT records are maintained; if there is a SPAN match between D_GL2INT (GIS_SPAN field) and the parcel polygons (SPAN field), the geometry is added to D_GL2PARCELS. The WHERE p.SHAPE IS NOT NULL command ensure only records with actual geometry are included.
+The last part of this script creates the final production layer, **D_GL2PARCELS**, using two joins. After truncating D_GL2PARCELS, a **RIGHT OUTER JOIN** merges D_GL2INT to the parcel polygons with a SPAN match. All the records of the table listed second (the Right table) are maintainted. In this case, the records for D_GL2INT records are maintained. If there is a SPAN match between D_GL2INT (GIS_SPAN field) and the parcel polygons (SPAN field), the geometry is added to D_GL2PARCELS. The WHERE p.SHAPE IS NOT NULL command ensure only records with actual geometry are included.
 
 *Two seperate joins are necceary to account for the one-to-many relationship of stacked polygons. The RIGHT OUTER JOIN ensure that the duplications in the GIS_SPAN field of D_GL2INT create duplicate geometry as each record joins to the same parcel polygon.*
 
@@ -102,7 +102,7 @@ ON (REPLACE(p.SPAN,'-','') = REPLACE(g.GIS_SPAN,'-','')) WHERE p.SHAPE IS NOT NU
 ORDER BY REPLACE(g.GLIST_SPAN,'-','');
 ```
 
-Because the RIGHT OUTER JOIN only adds the geometry for the parcel polygons with a SPAN match, a second join is neccesary to add the "unmatched" parcels (parcels polygons with no match in the D_GL2INT). A LEFT OUTER JOIN is used, which maintains all the parcel polygons records. The WHERE g.GIS_SPAN IS NULL command then filters for the unmatched parcels and adds those features to D_GL2PARCELS.
+Because the RIGHT OUTER JOIN only adds the geometry for the parcel polygons with a SPAN match, a second join is neccesary to add the "unmatched" parcels (parcels polygons with no match in D_GL2INT). A LEFT OUTER JOIN is used, which maintains all the parcel polygons records. The WHERE g.GIS_SPAN IS NULL command then filters for the unmatched parcels and adds those features to D_GL2PARCELS.
 
 ```sql
 INSERT INTO PARCEL_Admin.D_GL2PARCELS 

@@ -1,4 +1,5 @@
-## **What are stacked polygons?**
+# Parcel Geometry With Multiple Records Handling
+## Stacked Polygons
 
 The statewide parcel dataset is comprised of **parcel geometry**, the approximate parcel boundary lines drawn as closed multi-sided shapes (polygons), and **parcel attribution** from the annual Grand List. These two components are joined together by a matching School Property Account Number (SPAN) in the attribute table of the parcel polygons layer and in the Grand List. 
 
@@ -6,13 +7,13 @@ In most cases each parcel polygon is joined to one Grand List record, but it is 
 
 The **stacked polygons method** is the current recommendation for representing unlanded structures and common interest parcels such as condominiums, per the Vermont GIS Parcel Data Standard. A stacked polygon is a group of identical parcel polygons stacked on top of each other with a different Grand List record assigned to each. The stacked polygons can be “flattened” to remove all but one polygon for each parcel for analytical purposes.
 
-## **Using SQL Server to Create Stacked Polygons**
+## Using SQL Server to Create Stacked Polygons
 
 The SQL script below is a stored procedure, **JoinGL2Parcels**, that joins the statewide Grand List table to parcel polygons via a matching SPAN. The Intersection Table facilitates this join by relating more than one Grand List record to the same parcel polygon, resulting in stacked polygons. A **stored procedure** is a collection of SQL statements saved in a database along with the data needed to excute the prodecure. Stored procedures are often used for tasks that need to be executed repeatedly. 
 
-## **How the SQL Script Works**
+## How the SQL Script Works
 
-### **Data Inputs, Outputs, and Aliases**
+### Data Inputs, Outputs, and Aliases
 
 **Data Inputs:**
 - **PARCEL_Admin.GRANDLIST**: Database table of the statewide Grand List.
@@ -120,7 +121,7 @@ GO
 
 [IMAGE 2]
 
-## **Full SQL Script**
+## Full SQL Script
 
 *Additional annoations added for clairty.*
 

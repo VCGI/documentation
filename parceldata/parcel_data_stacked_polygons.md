@@ -119,11 +119,11 @@ ORDER BY TOWN;
 GO
 ```
 
-[IMAGE 2]
+![IMAGE 2](https://github.com/VCGI/documentation/blob/main/parceldata/IMAGE2_StackedPolygons.png?raw=true)
 
 ## Full SQL Script
 
-*Additional annoations added for clairty.*
+*Additional annoations added for clarity.*
 
 ```sql
 -- Set the working directory to the PARCELGDB database which contains the GIS data needed to run the procedure.

@@ -1,7 +1,7 @@
 # Handling Parcel Geometry With Many Associated Tabular Records
 ## Stacked Polygons
 
-The statewide parcel dataset is comprised of **parcel geometry**, the approximate parcel boundary lines drawn as closed multi-sided shapes (polygons), and **parcel attribution** from the annual Grand List. These two components are joined together by a matching School Property Account Number (SPAN) in the attribute table of the parcel polygons layer and in the Grand List. 
+The statewide parcel dataset overseen by the [Vermont Parcel Program](https://vcgi.vermont.gov/data-and-programs/parcel-program) is comprised of **parcel geometry**, the approximate parcel boundary lines drawn as closed multi-sided shapes (polygons), and **parcel attribution** from the annual Grand List. These two components are joined together by a matching School Property Account Number (SPAN) in the attribute table of the parcel polygons layer and in the Grand List. 
 
 In most cases each parcel polygon is joined to one Grand List record, but it is not uncommon for one parcel polygon to be assoicated with more than one Grand List record. This is often the case with parcel polygons that repersent condominium developments as they are typically described by their percentage of undivided interest in the common area and facilities rather than discrete boundaries that can be easily represented by polygons. 
 

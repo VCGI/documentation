@@ -5,7 +5,7 @@ The statewide parcel dataset overseen by the [Vermont Parcel Program](https://vc
 
 In most cases each parcel polygon is joined to one Grand List record, but it is not uncommon for one parcel polygon to be assoicated with more than one Grand List record. This is often the case with parcel polygons that repersent condominium developments as they are typically described by their percentage of undivided interest in the common area and facilities rather than discrete boundaries that can be easily represented by polygons. 
 
-The **stacked polygons method** is the current recommendation for representing unlanded structures and common interest parcels such as condominiums, per the Vermont GIS Parcel Data Standard. A stacked polygon is a group of identical parcel polygons stacked on top of each other with a different Grand List record assigned to each. The stacked polygons can be “flattened” to remove all but one polygon for each parcel for analytical purposes.
+The **stacked polygons method** is the current recommendation for representing unlanded structures and common interest parcels such as condominiums, per the [Vermont GIS Parcel Data Standard](https://vcgi.vermont.gov/resources/vermont-gis-standards-and-guidelines). A stacked polygon is a group of identical parcel polygons stacked on top of each other with a different Grand List record assigned to each. The stacked polygons can be “flattened” to remove all but one polygon for each parcel for analytical purposes.
 
 ## Using SQL Server to Create Stacked Polygons
 

@@ -34,7 +34,7 @@ Throughout the stored procedure, table aliases are used as a nickname for the fu
 
 ### Step 1: Setting Up the Workspace
 
-The first part of the script establishes the workspace. The USE command directs to the **PARCELGDB** database where the stored procedure, JoinGL2Parcels, will be saved as well as where the data exists needed to run to the stored procedure.
+The first part of the script establishes the workspace. The USE command directs to the **PARCELGDB** database where the stored procedure, JoinGL2Parcels, will be saved and where the data needed to run the stored procedure is stored.
 
 ```sql
 -- Set the working directory to the PARCELGDB database which contains the GIS data needed to run the procedure.
@@ -123,7 +123,7 @@ GO
 
 ## Full SQL Script
 
-*Additional annoations added for clarity.*
+*Additional annotations added for clarity.*
 
 ```sql
 -- Set the working directory to the PARCELGDB database which contains the GIS data needed to run the procedure.
